@@ -1,0 +1,238 @@
+[
+    {
+        "merged": "reader.aigd.app-release-44:/layout_activity_overlay.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/activity_overlay.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_search.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_gradient_fade_top.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/gradient_fade_top.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_dropdown.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_dropdown.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_speed.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_speed.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_play.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_play.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_size.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_size.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_dialog_permission_request.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/dialog_permission_request.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_chevron_down.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_chevron_down.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_minus.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_minus.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_whatsapp.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_whatsapp.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_gradient_fade_bottom.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/gradient_fade_bottom.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_undo.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_undo.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_activity_about.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/activity_about.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_open.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_open.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_resize.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_resize.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_share.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_share.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_tts.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_tts.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_drag.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_drag.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_close.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_close.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_time.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_time.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_sms.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_sms.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_bg_filled.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/bg_filled.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_copy.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_copy.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_activity_splash.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_email.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_email.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_seekbar_thumb.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/seekbar_thumb.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_back.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_empty.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_empty.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_custom_toast.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/custom_toast.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/font_aigd.ttf.flat",
+        "source": "reader.aigd.app-main-45:/font/aigd.ttf"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_check.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_check.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_add.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_add.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_activity_share.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/activity_share.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_activity_video_ads.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/activity_video_ads.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_delete.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_delete.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_dialog_premium_actions.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/dialog_premium_actions.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_settings.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_bg_outline.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/bg_outline.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/xml_data_extraction_rules.xml.flat",
+        "source": "reader.aigd.app-main-45:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_item_script.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/item_script.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_print.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_print.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_dialog_premium_delete.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/dialog_premium_delete.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_founder.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_founder.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_company.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_company.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_info.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_info.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_reset.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_reset.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_plus.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_plus.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_activity_home.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/activity_home.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_overlay_service.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/overlay_service.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_i.png.flat",
+        "source": "reader.aigd.app-main-45:/drawable/i.png"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_phone.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_phone.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/xml_backup_rules.xml.flat",
+        "source": "reader.aigd.app-main-45:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_custom_alert_dialog.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/custom_alert_dialog.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_paste.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_paste.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_pause.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_pause.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_activity_tts.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/activity_tts.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/drawable_ic_spacing.xml.flat",
+        "source": "reader.aigd.app-main-45:/drawable/ic_spacing.xml"
+    },
+    {
+        "merged": "reader.aigd.app-release-44:/layout_activity_add_script.xml.flat",
+        "source": "reader.aigd.app-main-45:/layout/activity_add_script.xml"
+    }
+]

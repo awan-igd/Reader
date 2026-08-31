@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "reader.aigd.app-mergeReleaseResources-42:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Awan IGD\\.gradle\\caches\\9.6.1\\transforms\\ba04e717378fffada78af71fdafa1983\\transformed\\appcompat-1.7.1\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+reader.aigd.app-pngs-0 D:\Reader\app\build\generated\res\pngs\release
+reader.aigd.app-updated_navigation_xml-1 D:\Reader\app\build\generated\updated_navigation_xml\release
+reader.aigd.app-packageReleaseResources-2 D:\Reader\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+reader.aigd.app-packageReleaseResources-3 D:\Reader\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+reader.aigd.app-release-4 D:\Reader\app\build\intermediates\merged_res\release\mergeReleaseResources
+reader.aigd.app-main-5 D:\Reader\app\src\main\res
+reader.aigd.app-release-6 D:\Reader\app\src\release\res
+gradleHome-0 C:\Users\Awan IGD\.gradle

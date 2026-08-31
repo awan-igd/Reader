@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_outline"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Icon Container -->
+    <FrameLayout
+        android:id="@+id/iconContainer"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_outline"
+        android:backgroundTint="#E3F2FD">
+
+        <ImageView
+            android:id="@+id/iconImage"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:src="@drawable/i"
+            />
+
+    </FrameLayout>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/aigd"
+        android:gravity="center"
+        android:text="Overlay Permission"
+        android:textColor="@color/f"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0.7"
+        android:fontFamily="@font/aigd"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="Reader needs this permission to show the floating teleprompter on top of other apps."
+        android:textColor="@color/f"
+        android:textSize="14sp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="60dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:alpha="0.2"
+        android:background="@color/f" />
+
+    <!-- Permission Info Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_outline"
+        android:backgroundTint="#F5F7FA"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/permissionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aigd"
+            android:text="Display over other apps"
+            android:textColor="@color/f"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/permissionDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:alpha="0.6"
+            android:fontFamily="@font/aigd"
+            android:text="Allows you to read scripts while using other apps like TikTok, Camera, and YouTube."
+            android:textColor="@color/f"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!-- Cancel Button -->
+        <LinearLayout
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_filled"
+            android:backgroundTint="#F0F0F0"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:stateListAnimator="@null">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aigd"
+                android:text="Cancel"
+                android:textColor="#6C6C8A"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Allow Button -->
+        <LinearLayout
+            android:id="@+id/allowButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_filled"
+            android:backgroundTint="@color/f"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:stateListAnimator="@null">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aigd"
+                android:text="Allow"
+                android:textColor="@color/b"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

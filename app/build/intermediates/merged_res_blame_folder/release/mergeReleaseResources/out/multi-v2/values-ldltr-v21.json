@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "reader.aigd.app-mergeReleaseResources-42:/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Awan IGD\\.gradle\\caches\\9.6.1\\transforms\\ba04e717378fffada78af71fdafa1983\\transformed\\appcompat-1.7.1\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

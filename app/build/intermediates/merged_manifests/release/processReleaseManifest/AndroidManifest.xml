@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="reader.aigd"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="36" />
+
+    <!-- ============================================== -->
+    <!-- NETWORK PERMISSIONS -->
+    <!-- ============================================== -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- ============================================== -->
+    <!-- STORAGE PERMISSIONS (For saving audio/files) -->
+    <!-- ============================================== -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <!-- ============================================== -->
+    <!-- AUDIO PERMISSIONS -->
+    <!-- ============================================== -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- ============================================== -->
+    <!-- OVERLAY PERMISSION (Floating Teleprompter) -->
+    <!-- ============================================== -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- ============================================== -->
+    <!-- NOTIFICATION PERMISSION (Android 13+) -->
+    <!-- ============================================== -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- ============================================== -->
+    <!-- FOREGROUND SERVICE PERMISSIONS -->
+    <!-- ============================================== -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <!-- ============================================== -->
+    <!-- VIBRATION PERMISSION -->
+    <!-- ============================================== -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+    </queries>
+
+    <permission
+        android:name="reader.aigd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="reader.aigd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- ============================================== -->
+    <!-- APPLICATION -->
+    <!-- ============================================== -->
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/i"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/i"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Reader"
+        android:usesCleartextTraffic="true" >
+
+        <!-- ============================================== -->
+        <!-- ACTIVITIES -->
+        <!-- ============================================== -->
+
+
+        <!-- Splash Activity (Launcher) -->
+        <activity
+            android:name="reader.aigd.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Reader"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Home Activity -->
+        <activity
+            android:name="reader.aigd.HomeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- About Activity -->
+        <activity
+            android:name="reader.aigd.AboutActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Editor Activity -->
+        <activity
+            android:name="reader.aigd.EditorActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Add Script Activity -->
+        <activity
+            android:name="reader.aigd.AddScriptActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- TTS Activity -->
+        <activity
+            android:name="reader.aigd.TTSActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- STT Activity -->
+        <activity
+            android:name="reader.aigd.STTActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Overlay Manager Activity -->
+        <activity
+            android:name="reader.aigd.OverlayManagerActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Export PDF Activity -->
+        <activity
+            android:name="reader.aigd.ExportPDFActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Export TXT Activity -->
+        <activity
+            android:name="reader.aigd.ExportTXTActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Import Activity -->
+        <activity
+            android:name="reader.aigd.ImportActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Share Activity -->
+        <activity
+            android:name="reader.aigd.ShareActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Settings Activity -->
+        <activity
+            android:name="reader.aigd.SettingsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Stats Activity -->
+        <activity
+            android:name="reader.aigd.StatsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Print Activity -->
+        <activity
+            android:name="reader.aigd.PrintActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- ============================================== -->
+        <!-- SERVICES -->
+        <!-- ============================================== -->
+
+
+        <!-- Overlay Service (Floating Teleprompter) -->
+        <service
+            android:name="reader.aigd.OverlayService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" >
+            <property
+                android:name="android.foreground_service_type_special_use"
+                android:value="floating_teleprompter_overlay" />
+        </service>
+
+        <activity
+            android:name="reader.aigd.VideoAdsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="reader.aigd.OverlayActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <provider
+            android:name="com.startapp.sdk.adsbase.StartAppInitProvider"
+            android:authorities="reader.aigd.startappinitprovider"
+            android:exported="false" />
+
+        <activity
+            android:name="com.startapp.sdk.adsbase.consent.ConsentActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.startapp.sdk.ads.list3d.List3DActivity"
+            android:theme="@android:style/Theme" />
+        <activity
+            android:name="com.startapp.sdk.ads.interstitials.OverlayActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <service android:name="com.startapp.sdk.cachedservice.BackgroundService" />
+        <service
+            android:name="com.startapp.sdk.jobs.SchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name="com.startapp.sdk.adsbase.remoteconfig.BootCompleteListener"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="reader.aigd.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

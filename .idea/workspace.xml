@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <target>android-36.1</target>
+      </config>
+    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_filled.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/gradient_fade_bottom.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/gradient_fade_top.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_check.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_company.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_copy.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_email.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_founder.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_info.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_minus.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_paste.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_phone.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_plus.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_print.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_reset.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_share.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_size.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_sms.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_spacing.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_speed.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_tts.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_undo.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_whatsapp.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/seekbar_thumb.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_script.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_overlay.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_share.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_tts.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_video_ads.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/custom_alert_dialog.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/custom_toast.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_permission_request.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_premium_actions.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_premium_delete.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_script.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/overlay_service.xml">
+        <config>
+          <theme>@style/Theme.Reader</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ac5b80ef-a527-4a89-a345-627f24230213" name="Changes" comment="Commite">
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/reader/aigd/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/reader/aigd/AboutActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/reader/aigd/AboutActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/reader/aigd/AddScriptActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/reader/aigd/AddScriptActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/reader/aigd/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/reader/aigd/HomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/reader/aigd/OverlayActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/reader/aigd/OverlayActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/reader/aigd/OverlayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/reader/aigd/OverlayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/reader/aigd/Script.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/reader/aigd/Script.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/reader/aigd/ShareActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/reader/aigd/ShareActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/reader/aigd/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/reader/aigd/SplashActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/reader/aigd/TTSActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/reader/aigd/TTSActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/DataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/gradient_fade_bottom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/gradient_fade_bottom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/gradient_fade_top.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/gradient_fade_top.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_back.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_back.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_check.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_check.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_close.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_close.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_company.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_company.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_copy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_copy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_drag.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_drag.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_dropdown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_dropdown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_email.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_email.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_empty.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_empty.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_founder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_founder.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_minus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_minus.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_open.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_open.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_paste.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_paste.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_pause.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_pause.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_phone.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_phone.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_play.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_play.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_plus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_plus.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_print.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_print.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_reset.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_reset.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_resize.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_resize.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_share.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_share.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_size.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_size.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_sms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_sms.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_spacing.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_spacing.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_speed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_speed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_time.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_time.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_tts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_tts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_undo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_undo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_whatsapp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_whatsapp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_permission_request.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_permission_request.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/reader/aigd/ExampleUnitTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Reader" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="valueResourceFile" />
+        <option value="Class" />
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
+        <option value="AnnotationType" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="D:\Reader\reader_key.jks" />
+    <option name="KEY_ALIAS" value="reader" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3FxLRgfgTQooFibmVO0vBmNiOG0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.app.executor": "Run",
+    "Android App.main.executor": "Run",
+    "ApkExportedModule": "Reader.app",
+    "BundleExportedModule": "Reader.app",
+    "ExportApk.ApkPathForReader.app": "D:\\Reader\\app",
+    "ExportBundle.BundlePathForReader.app": "D:\\Reader\\app",
+    "Gradle.Upgrade Gradle wrapper.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "D:/Reader/app/src/main/res/drawable",
+    "last_opened_file_path": "D:/Reader",
+    "project.structure.last.edited": "Dependencies",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "terminal"
+  },
+  "keyToStringList": {
+    "ExportApk.BuildVariants": [
+      "release"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="android.template.1088976232">
+      <recent name="reader.aigd" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="reader.aigd" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Reader\app\src\main\res\drawable" />
+      <recent name="D:\Reader\app\src\main\res\font" />
+      <recent name="D:\Reader\app\src\main\res" />
+    </key>
+    <key name="android.template.1553575390">
+      <recent name="reader.aigd" />
+    </key>
+    <key name="android.template.-1663585523">
+      <recent name="reader.aigd" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="Reader.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac5b80ef-a527-4a89-a345-627f24230213" name="Changes" comment="" />
+      <created>1783011767188</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1783011767188</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Commite">
+      <option name="closed" value="true" />
+      <created>1788140295353</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1788140295353</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commite" />
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="reader.aigd">
+          <value>
+            <CheckInfo lastCheckTimestamp="1788110741798" />
+          </value>
+        </entry>
+        <entry key="reader.aigd.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1788110741798" />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

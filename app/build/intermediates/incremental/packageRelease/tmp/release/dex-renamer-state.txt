@@ -1,0 +1,7 @@
+#Tue Jul 21 15:48:16 PKT 2026
+base.0=D\:\\Reader\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+base.1=D\:\\Reader\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
+path.0=classes.dex
+path.1=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
