@@ -1,7 +1,5 @@
 package reader.aigd;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.net.Uri;
@@ -28,6 +26,7 @@ import com.startapp.sdk.adsbase.StartAppSDK;
 
 public class AboutActivity extends AppCompatActivity {
 
+    private final Handler handler = new Handler(Looper.getMainLooper());
     // ==============================================
     // UI COMPONENTS
     // ==============================================
@@ -38,14 +37,11 @@ public class AboutActivity extends AppCompatActivity {
     private LinearLayout phoneButton;
     private TextView appNameText;
     private TextView companyNameText;
-
     // ==============================================
     // START.IO AD ELEMENTS
     // ==============================================
     private Banner startAppBanner;
     private StartAppAd startAppAd;
-
-    private final Handler handler = new Handler(Looper.getMainLooper());
     private boolean isExiting = false;
 
     @Override

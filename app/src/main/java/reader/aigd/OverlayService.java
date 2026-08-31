@@ -42,12 +42,11 @@ public class OverlayService extends Service {
     private static final String CHANNEL_ID = "reader_overlay_channel";
     private static final int NOTIFICATION_ID = 1001;
     private static final String PREFS_OVERLAY = "overlay_settings";
-
+    private final Handler handler = new Handler();
     // Window Manager Components
     private WindowManager windowManager;
     private View overlayView;
     private WindowManager.LayoutParams layoutParams;
-
     // XML UI Components
     private TextView scriptTextView;
     private TextView scriptTitleText;
@@ -60,33 +59,26 @@ public class OverlayService extends Service {
     private NestedScrollView overlayScrollView;
     private ImageView playIcon;
     private View topBar;
-
     // Speed Controller Views
     private LinearLayout speedMinus;
     private LinearLayout speedPlus;
     private SeekBar speedSeekBar;
     private TextView speedValueText;
-
     // Data Management
     private DataManager dataManager;
     private String scriptContent = "";
     private long currentScriptId = -1;
     private String scriptTitle = "Reader";
-
     // Teleprompter Scrolling States
     private boolean isPlaying = false;
     private ValueAnimator scrollAnimator;
     private int currentScrollY = 0;
     private int maxScrollY = 0;
-
     // Configurable Settings
     private int currentFontSize = 18;
     private float currentScrollSpeed = 0.10f;  // ✅ ULTRA SLOW default
     private int currentLineSpacing = 8;
-
     private SharedPreferences settingsPrefs;
-    private final Handler handler = new Handler();
-
     // Boundary Trackers
     private int screenWidth;
     private int screenHeight;
@@ -418,7 +410,8 @@ public class OverlayService extends Service {
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {}
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {

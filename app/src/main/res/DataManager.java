@@ -306,15 +306,61 @@ public class DataManager {
             this.timestampMillis = timestampMillis;
         }
 
-        public String getId() { return id; }
-        public String getTitle() { return title != null ? title : FIXED_TITLE; }
-        public void setTitle(String title) { this.title = title != null ? title : FIXED_TITLE; }
-        public String getContent() { return content; }
-        public void setContent(String content) { this.content = content; }
-        public String getLastEdited() { return lastEdited; }
-        public void setLastEdited(String lastEdited) { this.lastEdited = lastEdited; }
-        public long getTimestampMillis() { return timestampMillis; }
-        public void setTimestampMillis(long timestampMillis) { this.timestampMillis = timestampMillis; }
+        public static Script fromJson(JSONObject obj) throws JSONException {
+            String content = obj.has("content") ? obj.getString("content") : "";
+            String lastEdited = obj.has("lastEdited") ? obj.getString("lastEdited") : "Last edited now";
+            long timestamp = obj.has("timestampMillis") ? obj.getLong("timestampMillis") : System.currentTimeMillis();
+
+            return new Script(
+                    obj.getString("id"),
+                    FIXED_TITLE,
+                    content,
+                    lastEdited,
+                    timestamp
+            );
+        }
+
+        // Helper method to get current timestamp
+        private static String getCurrentTimestamp() {
+            SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy • hh:mm a", Locale.getDefault());
+            return "Last edited " + sdf.format(new Date());
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public String getTitle() {
+            return title != null ? title : FIXED_TITLE;
+        }
+
+        public void setTitle(String title) {
+            this.title = title != null ? title : FIXED_TITLE;
+        }
+
+        public String getContent() {
+            return content;
+        }
+
+        public void setContent(String content) {
+            this.content = content;
+        }
+
+        public String getLastEdited() {
+            return lastEdited;
+        }
+
+        public void setLastEdited(String lastEdited) {
+            this.lastEdited = lastEdited;
+        }
+
+        public long getTimestampMillis() {
+            return timestampMillis;
+        }
+
+        public void setTimestampMillis(long timestampMillis) {
+            this.timestampMillis = timestampMillis;
+        }
 
         @Override
         public boolean equals(Object obj) {
@@ -341,26 +387,6 @@ public class DataManager {
                 e.printStackTrace();
             }
             return obj;
-        }
-
-        public static Script fromJson(JSONObject obj) throws JSONException {
-            String content = obj.has("content") ? obj.getString("content") : "";
-            String lastEdited = obj.has("lastEdited") ? obj.getString("lastEdited") : "Last edited now";
-            long timestamp = obj.has("timestampMillis") ? obj.getLong("timestampMillis") : System.currentTimeMillis();
-
-            return new Script(
-                    obj.getString("id"),
-                    FIXED_TITLE,
-                    content,
-                    lastEdited,
-                    timestamp
-            );
-        }
-
-        // Helper method to get current timestamp
-        private static String getCurrentTimestamp() {
-            SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy • hh:mm a", Locale.getDefault());
-            return "Last edited " + sdf.format(new Date());
         }
     }
 }

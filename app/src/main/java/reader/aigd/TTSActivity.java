@@ -32,7 +32,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.google.android.material.textfield.TextInputEditText;
-
 import com.startapp.sdk.ads.banner.Banner;
 import com.startapp.sdk.adsbase.StartAppAd;
 import com.startapp.sdk.adsbase.StartAppSDK;
@@ -42,10 +41,30 @@ import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import java.util.UUID;
 
 public class TTSActivity extends AppCompatActivity {
 
+    private static final int PROGRESS_DURATION = 30;
+    // Permissions
+    private static final int PERMISSION_REQUEST_CODE = 100;
+    private static final String[] REQUIRED_PERMISSIONS;
+
+    static {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            REQUIRED_PERMISSIONS = new String[]{
+                    Manifest.permission.RECORD_AUDIO,
+                    Manifest.permission.POST_NOTIFICATIONS
+            };
+        } else {
+            REQUIRED_PERMISSIONS = new String[]{
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_EXTERNAL_STORAGE,
+                    Manifest.permission.RECORD_AUDIO
+            };
+        }
+    }
+
+    private final Handler handler = new Handler(Looper.getMainLooper());
     // UI Components
     private TextView scriptContent;
     private TextView headerTitle;
@@ -70,11 +89,9 @@ public class TTSActivity extends AppCompatActivity {
     private SeekBar speedSeekBar;
     private TextView pitchValue;
     private TextView speedValue;
-
     // Start.io Ads
     private Banner startAppBanner;
     private StartAppAd startAppAd;
-
     // TTS Engine
     private TextToSpeech textToSpeech;
     private boolean isTTSReady = false;
@@ -86,39 +103,16 @@ public class TTSActivity extends AppCompatActivity {
     private String currentTitle = "";
     private long scriptId = -1;
     private String detectedLanguage = "English";
-
     // Audio Recording & Playback
     private MediaPlayer mediaPlayer;
     private MediaRecorder mediaRecorder;
     private String audioFilePath = "";
     private boolean isRecording = false;
     private boolean isAudioSaved = false;
-    private final Handler handler = new Handler(Looper.getMainLooper());
     private Runnable progressRunnable;
     private boolean isAutoSaveEnabled = true;
-
     // Progress tracking
     private int currentProgress = 0;
-    private static final int PROGRESS_DURATION = 30;
-
-    // Permissions
-    private static final int PERMISSION_REQUEST_CODE = 100;
-    private static final String[] REQUIRED_PERMISSIONS;
-
-    static {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            REQUIRED_PERMISSIONS = new String[]{
-                    Manifest.permission.RECORD_AUDIO,
-                    Manifest.permission.POST_NOTIFICATIONS
-            };
-        } else {
-            REQUIRED_PERMISSIONS = new String[]{
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                    Manifest.permission.READ_EXTERNAL_STORAGE,
-                    Manifest.permission.RECORD_AUDIO
-            };
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -347,30 +341,65 @@ public class TTSActivity extends AppCompatActivity {
         int maxCount = 0;
         String dominantLanguage = "English";
 
-        if (arabicCount > maxCount) { maxCount = arabicCount; dominantLanguage = "Arabic"; }
-        if (urduCount > maxCount) { maxCount = urduCount; dominantLanguage = "Urdu"; }
-        if (hindiCount > maxCount) { maxCount = hindiCount; dominantLanguage = "Hindi"; }
-        if (chineseCount > maxCount) { maxCount = chineseCount; dominantLanguage = "Chinese"; }
-        if (russianCount > maxCount) { maxCount = russianCount; dominantLanguage = "Russian"; }
-        if (spanishCount > maxCount) { maxCount = spanishCount; dominantLanguage = "Spanish"; }
-        if (frenchCount > maxCount) { maxCount = frenchCount; dominantLanguage = "French"; }
-        if (germanCount > maxCount) { maxCount = germanCount; dominantLanguage = "German"; }
-        if (englishCount > maxCount) { dominantLanguage = "English"; }
+        if (arabicCount > maxCount) {
+            maxCount = arabicCount;
+            dominantLanguage = "Arabic";
+        }
+        if (urduCount > maxCount) {
+            maxCount = urduCount;
+            dominantLanguage = "Urdu";
+        }
+        if (hindiCount > maxCount) {
+            maxCount = hindiCount;
+            dominantLanguage = "Hindi";
+        }
+        if (chineseCount > maxCount) {
+            maxCount = chineseCount;
+            dominantLanguage = "Chinese";
+        }
+        if (russianCount > maxCount) {
+            maxCount = russianCount;
+            dominantLanguage = "Russian";
+        }
+        if (spanishCount > maxCount) {
+            maxCount = spanishCount;
+            dominantLanguage = "Spanish";
+        }
+        if (frenchCount > maxCount) {
+            maxCount = frenchCount;
+            dominantLanguage = "French";
+        }
+        if (germanCount > maxCount) {
+            maxCount = germanCount;
+            dominantLanguage = "German";
+        }
+        if (englishCount > maxCount) {
+            dominantLanguage = "English";
+        }
 
         return dominantLanguage;
     }
 
     private Locale getLocaleFromLanguage(String language) {
         switch (language) {
-            case "Arabic": return new Locale("ar", "SA");
-            case "Urdu": return new Locale("ur", "PK");
-            case "Hindi": return new Locale("hi", "IN");
-            case "Chinese": return Locale.CHINESE;
-            case "Russian": return new Locale("ru", "RU");
-            case "Spanish": return new Locale("es", "ES");
-            case "French": return new Locale("fr", "FR");
-            case "German": return new Locale("de", "DE");
-            default: return Locale.US;
+            case "Arabic":
+                return new Locale("ar", "SA");
+            case "Urdu":
+                return new Locale("ur", "PK");
+            case "Hindi":
+                return new Locale("hi", "IN");
+            case "Chinese":
+                return Locale.CHINESE;
+            case "Russian":
+                return new Locale("ru", "RU");
+            case "Spanish":
+                return new Locale("es", "ES");
+            case "French":
+                return new Locale("fr", "FR");
+            case "German":
+                return new Locale("de", "DE");
+            default:
+                return Locale.US;
         }
     }
 
@@ -455,10 +484,12 @@ public class TTSActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {}
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
 
         speedSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -477,10 +508,12 @@ public class TTSActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {}
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
     }
 
@@ -834,17 +867,38 @@ public class TTSActivity extends AppCompatActivity {
                     if (isTTSReady && textToSpeech != null) {
                         Locale locale;
                         switch (which) {
-                            case 0: locale = Locale.US; break;
-                            case 1: locale = Locale.UK; break;
-                            case 2: locale = new Locale("ar", "SA"); break;
-                            case 3: locale = new Locale("ur", "PK"); break;
-                            case 4: locale = new Locale("hi", "IN"); break;
-                            case 5: locale = new Locale("es", "ES"); break;
-                            case 6: locale = new Locale("fr", "FR"); break;
-                            case 7: locale = new Locale("de", "DE"); break;
-                            case 8: locale = Locale.CHINESE; break;
-                            case 9: locale = new Locale("ru", "RU"); break;
-                            default: locale = Locale.US;
+                            case 0:
+                                locale = Locale.US;
+                                break;
+                            case 1:
+                                locale = Locale.UK;
+                                break;
+                            case 2:
+                                locale = new Locale("ar", "SA");
+                                break;
+                            case 3:
+                                locale = new Locale("ur", "PK");
+                                break;
+                            case 4:
+                                locale = new Locale("hi", "IN");
+                                break;
+                            case 5:
+                                locale = new Locale("es", "ES");
+                                break;
+                            case 6:
+                                locale = new Locale("fr", "FR");
+                                break;
+                            case 7:
+                                locale = new Locale("de", "DE");
+                                break;
+                            case 8:
+                                locale = Locale.CHINESE;
+                                break;
+                            case 9:
+                                locale = new Locale("ru", "RU");
+                                break;
+                            default:
+                                locale = Locale.US;
                         }
                         textToSpeech.setLanguage(locale);
                         showToast("Voice: " + selected);

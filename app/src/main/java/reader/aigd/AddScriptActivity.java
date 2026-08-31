@@ -40,6 +40,7 @@ import com.startapp.sdk.adsbase.StartAppSDK;
 
 public class AddScriptActivity extends AppCompatActivity {
 
+    private final Handler handler = new Handler(Looper.getMainLooper());
     // UI Components
     private TextInputEditText contentInput;
     private LinearLayout backButton;
@@ -52,14 +53,11 @@ public class AddScriptActivity extends AppCompatActivity {
     private TextView headerSubtitle;
     private TextInputLayout contentTextLayout;
     private FloatingActionButton fabSave;
-
     // Start.io Ad Elements
     private Banner startAppBanner;
     private StartAppAd startAppAd;
-
     // Data
     private DataManager dataManager;
-    private final Handler handler = new Handler(Looper.getMainLooper());
     private boolean isEditing = false;
     private long editingScriptId = -1;
     private String originalContent = "";

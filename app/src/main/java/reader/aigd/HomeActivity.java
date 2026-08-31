@@ -1,9 +1,5 @@
 package reader.aigd;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -19,7 +15,6 @@ import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -39,7 +34,6 @@ import androidx.recyclerview.widget.SimpleItemAnimator;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-
 import com.startapp.sdk.ads.banner.Banner;
 import com.startapp.sdk.adsbase.StartAppAd;
 import com.startapp.sdk.adsbase.StartAppSDK;
@@ -52,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
     private final List<Script> scriptList = new ArrayList<>();
     private final List<Script> filteredList = new ArrayList<>();
     private final Handler searchHandler = new Handler(Looper.getMainLooper());
-
+    private final String currentSort = "newest";
     // UI Components
     private RecyclerView scriptsRecyclerView;
     private FloatingActionButton fabAddScript;
@@ -69,16 +63,13 @@ public class HomeActivity extends AppCompatActivity {
     private TextView searchIndicator;
     private View accentLine;
     private com.google.android.material.card.MaterialCardView loadingProgress;
-
     // Start.io Ad Elements
     private Banner startAppBanner;
     private StartAppAd startAppAd;
-
     // Data
     private ScriptAdapter scriptAdapter;
     private Runnable searchRunnable;
     private boolean isSearching = false;
-    private final String currentSort = "newest";
     private boolean isLoading = false;
     private Typeface nolroFont;
     private DataManager dataManager;
@@ -611,7 +602,8 @@ public class HomeActivity extends AppCompatActivity {
             private String previousText = "";
 
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -643,7 +635,8 @@ public class HomeActivity extends AppCompatActivity {
             }
 
             @Override
-            public void afterTextChanged(android.text.Editable s) {}
+            public void afterTextChanged(android.text.Editable s) {
+            }
         });
     }
 
@@ -771,6 +764,35 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 100 && resultCode == RESULT_OK) {
+            refreshData();
+            if (scriptsRecyclerView != null) {
+                scriptsRecyclerView.smoothScrollToPosition(0);
+            }
+            showCustomToast("Script saved successfully!");
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refreshData();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (searchInput.getText() != null && !searchInput.getText().toString().isEmpty()) {
+            searchInput.setText("");
+            showCustomToast("Search cleared");
+        } else {
+            super.onBackPressed();
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        }
+    }
+
     // ==============================================
     // SCRIPT ADAPTER
     // ==============================================
@@ -889,35 +911,6 @@ public class HomeActivity extends AppCompatActivity {
                 metadataText = itemView.findViewById(R.id.scriptMetadata);
                 previewText = itemView.findViewById(R.id.scriptPreview);
             }
-        }
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 100 && resultCode == RESULT_OK) {
-            refreshData();
-            if (scriptsRecyclerView != null) {
-                scriptsRecyclerView.smoothScrollToPosition(0);
-            }
-            showCustomToast("Script saved successfully!");
-        }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        refreshData();
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (searchInput.getText() != null && !searchInput.getText().toString().isEmpty()) {
-            searchInput.setText("");
-            showCustomToast("Search cleared");
-        } else {
-            super.onBackPressed();
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         }
     }
 }

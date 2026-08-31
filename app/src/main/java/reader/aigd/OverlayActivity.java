@@ -49,7 +49,7 @@ public class OverlayActivity extends AppCompatActivity {
     private static final int NOTIFICATION_PERMISSION_REQUEST = 1002;
 
     private final Handler mainHandler = new Handler(Looper.getMainLooper());
-
+    private final Handler handler = new Handler(Looper.getMainLooper());
     // UI Components
     private TextView scriptContent;
     private NestedScrollView scrollView;
@@ -74,23 +74,19 @@ public class OverlayActivity extends AppCompatActivity {
     private LinearLayout closeSettingsButton;
     private LinearLayout resetSettingsButton;
     private View progressLine;
-
     // Data Parameters
     private DataManager dataManager;
     private long scriptId = -1;
     private String originalContent = "";
     private String scriptTitle = "";
-
     // Teleprompter Configuration State
     private boolean isPlaying = false;
     private ValueAnimator scrollAnimator;
-
     // Settings Defaults
     private int currentFontSize = 18;
     private float currentScrollSpeed = 1.0f;
     private int currentLineSpacing = 8;
     private int currentOpacity = 100;
-    private final Handler handler = new Handler(Looper.getMainLooper());
     private boolean settingsPanelVisible = false;
 
     // SharedPreferences Storage
