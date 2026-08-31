@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Reader" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/f</item>
+        <item name="colorPrimaryVariant">@color/f</item>
+        <item name="colorOnPrimary">@color/b</item>
+
+        <item name="colorSecondary">@color/f</item>
+        <item name="colorSecondaryVariant">@color/f</item>
+        <item name="colorOnSecondary">@color/b</item>
+
+        <item name="android:statusBarColor">@color/f</item>
+        <item name="android:windowBackground">@color/b</item>
+    </style>
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_outline"
+    android:backgroundTint="@color/b"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Icon Container -->
+    <FrameLayout
+        android:id="@+id/iconContainer"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_outline"
+        android:backgroundTint="#FFE5E5">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_delete"
+            app:tint="#FF3B30" />
+
+    </FrameLayout>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/aigd"
+        android:gravity="center"
+        android:text="Delete Script"
+        android:textColor="@color/f"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Script Name -->
+    <TextView
+        android:id="@+id/scriptName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:alpha="0.7"
+        android:fontFamily="@font/aigd"
+        android:gravity="center"
+        android:text="Script Name"
+        android:textColor="@color/f"
+        android:textSize="16sp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="60dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:alpha="0.2"
+        android:background="@color/f" />
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:alpha="0.6"
+        android:fontFamily="@font/aigd"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="This action cannot be undone. The script will be permanently removed."
+        android:textColor="@color/f"
+        android:textSize="14sp" />
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!-- Cancel Button -->
+        <LinearLayout
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_outline"
+            android:backgroundTint="#F0F0F0"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:stateListAnimator="@null">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aigd"
+                android:text="Cancel"
+                android:textColor="#6C6C8A"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Delete Button -->
+        <LinearLayout
+            android:id="@+id/deleteButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_filled"
+            android:backgroundTint="#FF3B30"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:stateListAnimator="@null">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_delete"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aigd"
+                android:text="Delete"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
