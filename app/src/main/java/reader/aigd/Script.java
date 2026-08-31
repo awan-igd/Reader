@@ -95,72 +95,72 @@ public class Script {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getTitle() {
         return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
-
     public String getLastEdited() {
         return lastEdited;
-    }
-
-    public void setLastEdited(String lastEdited) {
-        this.lastEdited = lastEdited;
     }
 
     public boolean isFavorite() {
         return isFavorite;
     }
 
-    // ==============================================
-    // SETTERS
-    // ==============================================
-
-    public void setFavorite(boolean favorite) {
-        isFavorite = favorite;
-    }
-
     public boolean isPinned() {
         return isPinned;
-    }
-
-    public void setPinned(boolean pinned) {
-        isPinned = pinned;
     }
 
     public boolean isRecent() {
         return isRecent;
     }
 
-    public void setRecent(boolean recent) {
-        isRecent = recent;
-    }
-
     public int getOpenCount() {
         return openCount;
     }
 
-    public void setOpenCount(int openCount) {
-        this.openCount = openCount;
-    }
-
     public long getTotalReadingTime() {
         return totalReadingTime;
+    }
+
+    // ==============================================
+    // SETTERS
+    // ==============================================
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setLastEdited(String lastEdited) {
+        this.lastEdited = lastEdited;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
+
+    public void setPinned(boolean pinned) {
+        isPinned = pinned;
+    }
+
+    public void setRecent(boolean recent) {
+        isRecent = recent;
+    }
+
+    public void setOpenCount(int openCount) {
+        this.openCount = openCount;
     }
 
     public void setTotalReadingTime(long totalReadingTime) {

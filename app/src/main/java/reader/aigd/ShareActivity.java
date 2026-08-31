@@ -4,11 +4,13 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.graphics.pdf.PdfDocument;
+import android.graphics.pdf.PdfRenderer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -49,12 +51,6 @@ import java.util.Locale;
 
 public class ShareActivity extends AppCompatActivity {
 
-    // Watermark settings
-    private static final String WATERMARK_TEXT = "Reader by Awan IGD";
-    private static final float WATERMARK_SIZE = 14f;
-    private static final int WATERMARK_ALPHA = 40;
-    private static final int WATERMARK_SPACING = 80;
-    private final Handler handler = new Handler(Looper.getMainLooper());
     // UI Components
     private TextView scriptTitlePreview;
     private TextView scriptContentPreview;
@@ -73,12 +69,20 @@ public class ShareActivity extends AppCompatActivity {
     private LinearLayout shareMore;
     private FrameLayout loadingOverlay;
     private ProgressBar loadingSpinner;
+
     // Data
     private DataManager dataManager;
     private long scriptId = -1;
     private String scriptContent = "";
     private String scriptTitle = "";
     private Typeface nolroFont;
+    private final Handler handler = new Handler(Looper.getMainLooper());
+
+    // Watermark settings
+    private static final String WATERMARK_TEXT = "Reader by Awan IGD";
+    private static final float WATERMARK_SIZE = 14f;
+    private static final int WATERMARK_ALPHA = 40;
+    private static final int WATERMARK_SPACING = 80;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
