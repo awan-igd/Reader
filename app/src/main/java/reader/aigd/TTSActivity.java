@@ -91,11 +91,11 @@ public class TTSActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     private MediaRecorder mediaRecorder;
     private String audioFilePath = "";
-    private boolean isRecording = false;
+    private final boolean isRecording = false;
     private boolean isAudioSaved = false;
     private final Handler handler = new Handler(Looper.getMainLooper());
     private Runnable progressRunnable;
-    private boolean isAutoSaveEnabled = true;
+    private final boolean isAutoSaveEnabled = true;
 
     // Progress tracking
     private int currentProgress = 0;

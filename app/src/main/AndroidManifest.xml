@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- PERMISSIONS -->
+    <!-- REQUIRED PERMISSIONS -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission
@@ -11,13 +11,9 @@
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
-    <uses-permission
-        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -59,7 +55,7 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
-        <!-- TTS Activity (Text-to-Speech) -->
+        <!-- TTS Activity -->
         <activity
             android:name=".TTSActivity"
             android:exported="false"
@@ -77,14 +73,14 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
-        <!-- Overlay Activity (Floating Teleprompter UI) -->
+        <!-- Overlay Activity -->
         <activity
             android:name=".OverlayActivity"
             android:exported="false"
             android:theme="@style/Theme.Reader"
             android:windowSoftInputMode="adjustResize" />
 
-        <!-- Overlay Service (Floating Teleprompter Background) -->
+        <!-- Overlay Service -->
         <service
             android:name=".OverlayService"
             android:enabled="true"

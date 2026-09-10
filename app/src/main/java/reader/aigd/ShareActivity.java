@@ -486,8 +486,8 @@ public class ShareActivity extends AppCompatActivity {
                         canvas.save();
                         canvas.rotate(angle, pageWidth / 2f, pageHeight / 2f);
 
-                        int cols = (int) (pageWidth / WATERMARK_SPACING) + 2;
-                        int rows = (int) (pageHeight / WATERMARK_SPACING) + 2;
+                        int cols = (pageWidth / WATERMARK_SPACING) + 2;
+                        int rows = (pageHeight / WATERMARK_SPACING) + 2;
                         float startX = -pageWidth / 2f;
                         float startY = -pageHeight / 2f;
 
