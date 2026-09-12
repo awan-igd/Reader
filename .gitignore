@@ -32,3 +32,7 @@ local.properties
 *.aab 
 *.log 
 /app/src/main/assets/ 
+reader_key.jks
+*.jks
+*.keystore
+key.properties
