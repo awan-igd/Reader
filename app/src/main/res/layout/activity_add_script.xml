@@ -1,73 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/b"
-    tools:context=".AddScriptActivity">
+    android:background="@color/b">
 
-    <!-- ============================================== -->
-    <!-- START.IO BANNER AD - TOP                      -->
-    <!-- ============================================== -->
     <com.startapp.sdk.ads.banner.Banner
         android:id="@+id/startAppBanner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- ============================================== -->
-    <!-- HEADER SECTION                                -->
-    <!-- ============================================== -->
     <LinearLayout
         android:id="@+id/headerContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/b"
         android:orientation="vertical"
-        android:paddingStart="20dp"
-        android:paddingTop="16dp"
-        android:paddingEnd="20dp"
-        android:paddingBottom="20dp"
+        android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startAppBanner">
+        app:layout_constraintTop_toBottomOf="@id/startAppBanner">
 
-        <!-- Action Bar -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/backButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            app:cardBackgroundColor="@color/f"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp">
 
-            <!-- Back Button -->
-            <LinearLayout
-                android:id="@+id/backButton"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:background="@drawable/bg_outline"
-                android:backgroundTint="@color/f"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:stateListAnimator="@null">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back"
+                app:tint="@color/b" />
+        </com.google.android.material.card.MaterialCardView>
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_back"
-                    app:tint="@color/b" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- Header Title -->
         <TextView
             android:id="@+id/headerTitle"
             android:layout_width="wrap_content"
@@ -76,10 +47,9 @@
             android:fontFamily="@font/aigd"
             android:text="New Script"
             android:textColor="@color/f"
-            android:textSize="28sp"
+            android:textSize="26sp"
             android:textStyle="bold" />
 
-        <!-- Header Subtitle -->
         <TextView
             android:id="@+id/headerSubtitle"
             android:layout_width="wrap_content"
@@ -87,51 +57,46 @@
             android:layout_marginTop="4dp"
             android:alpha="0.7"
             android:fontFamily="@font/aigd"
-            android:text="Start writing your script..."
+            android:text="Write freely, title auto-creates"
             android:textColor="@color/f"
-            android:textSize="14sp" />
+            android:textSize="13sp" />
 
+        <View
+            android:layout_width="36dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/t" />
     </LinearLayout>
 
-    <!-- ============================================== -->
-    <!-- SCROLLABLE CONTENT                           -->
-    <!-- ============================================== -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/b"
         android:fillViewport="true"
-        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerContainer">
+        app:layout_constraintTop_toBottomOf="@id/headerContainer">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingStart="20dp"
-            android:paddingTop="12dp"
-            android:paddingEnd="20dp"
+            android:padding="20dp"
             android:paddingBottom="120dp">
 
-            <!-- Content Input -->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/contentTextLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Write your script here..."
                 app:boxBackgroundColor="@color/b"
-                app:boxCornerRadiusBottomEnd="12dp"
-                app:boxCornerRadiusBottomStart="12dp"
-                app:boxCornerRadiusTopEnd="12dp"
-                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
                 app:boxStrokeColor="@color/f"
-                app:boxStrokeWidth="1.5dp"
-                app:boxStrokeWidthFocused="2dp"
+                app:boxStrokeWidth="1dp"
                 app:hintTextColor="@color/f">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -142,160 +107,119 @@
                     android:gravity="top|start"
                     android:inputType="textMultiLine|textCapSentences"
                     android:lineSpacingExtra="6dp"
-                    android:minHeight="300dp"
+                    android:minHeight="400dp"
                     android:padding="16dp"
                     android:textColor="@color/f"
                     android:textColorHint="@color/f"
                     android:textSize="16sp" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Action Buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:orientation="horizontal"
-                android:weightSum="3">
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
 
-                <!-- Clear Button -->
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/clearButton"
                     android:layout_width="0dp"
                     android:layout_height="44dp"
-                    android:layout_marginEnd="6dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_outline"
-                    android:backgroundTint="@color/f"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:stateListAnimator="@null">
+                    app:cardBackgroundColor="@color/f"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
 
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_marginEnd="4dp"
-                        android:src="@drawable/ic_close"
-                        app:tint="@color/b" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/aigd"
-                        android:text="Clear"
-                        android:textColor="@color/b"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/ic_close"
+                            app:tint="@color/b" />
 
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:fontFamily="@font/aigd"
+                            android:text="Clear"
+                            android:textColor="@color/b"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                <!-- Undo Button -->
-                <LinearLayout
-                    android:id="@+id/undoButton"
-                    android:layout_width="0dp"
-                    android:layout_height="44dp"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_outline"
-                    android:backgroundTint="@color/f"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:stateListAnimator="@null"
-                    android:visibility="gone">
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_marginEnd="4dp"
-                        android:src="@drawable/ic_undo"
-                        app:tint="@color/b" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/aigd"
-                        android:text="Undo"
-                        android:textColor="@color/b"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <!-- Paste Button -->
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/pasteButton"
                     android:layout_width="0dp"
                     android:layout_height="44dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_outline"
-                    android:backgroundTint="@color/f"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:stateListAnimator="@null">
+                    app:cardBackgroundColor="@color/f"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
 
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_marginEnd="4dp"
-                        android:src="@drawable/ic_paste"
-                        app:tint="@color/b" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/aigd"
-                        android:text="Paste"
-                        android:textColor="@color/b"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/ic_paste"
+                            app:tint="@color/b" />
 
-                </LinearLayout>
-
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:fontFamily="@font/aigd"
+                            android:text="Paste"
+                            android:textColor="@color/b"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
-
         </LinearLayout>
-
     </ScrollView>
 
-    <!-- ============================================== -->
-    <!-- LOADING OVERLAY                               -->
-    <!-- ============================================== -->
-    <ProgressBar
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/loadingOverlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha="0.92"
-        android:background="@color/b"
-        android:indeterminateTint="@color/f"
-        android:padding="160dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
         android:visibility="gone"
+        app:cardBackgroundColor="@color/f"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <!-- ============================================== -->
-    <!-- FLOATING SAVE BUTTON                         -->
-    <!-- ============================================== -->
+        <ProgressBar
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/b" />
+    </com.google.android.material.card.MaterialCardView>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabSave"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_margin="24dp"
-        android:clickable="true"
-        android:elevation="6dp"
-        android:focusable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:src="@drawable/ic_check"
-        app:backgroundTint="@color/f"
-        app:fabSize="normal"
+        app:backgroundTint="@color/t"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@color/b" />
+        app:tint="@color/f" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,146 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/b"
-    tools:context=".OverlayActivity">
+    android:background="@color/b">
 
-    <!-- ============================================== -->
-    <!-- TOP BAR WITH ALL CONTROLS IN ONE ROW         -->
-    <!-- ============================================== -->
+    <!-- TOP BAR ULTRA -->
     <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/b"
-        android:elevation="4dp"
+        android:elevation="6dp"
         android:orientation="vertical"
-        android:paddingStart="16dp"
-        android:paddingTop="12dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="12dp"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Single Row: All Icons -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <!-- Play Button -->
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/playButton"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:background="@drawable/bg_outline"
-                android:backgroundTint="@color/b"
-                android:clickable="true"
-                android:elevation="2dp"
-                android:focusable="true"
-                android:gravity="center"
-                android:stateListAnimator="@null">
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                app:cardBackgroundColor="@color/f"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
 
                 <ImageView
                     android:id="@+id/playIcon"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/ic_play"
-                    app:tint="@color/f" />
+                    app:tint="@color/b" />
+            </com.google.android.material.card.MaterialCardView>
 
-            </LinearLayout>
-
-            <!-- Play Overlay Button -->
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/playOverlayButton"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/bg_outline"
-                android:backgroundTint="@color/b"
-                android:clickable="true"
-                android:elevation="2dp"
-                android:focusable="true"
-                android:gravity="center"
-                android:stateListAnimator="@null">
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="10dp"
+                app:cardBackgroundColor="@color/b"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/f"
+                app:strokeWidth="1dp">
 
                 <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/ic_open"
                     app:tint="@color/f" />
+            </com.google.android.material.card.MaterialCardView>
 
-            </LinearLayout>
-
-            <!-- Spacer -->
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
-            <!-- Settings Button -->
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/settingsButton"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:background="@drawable/bg_outline"
-                android:backgroundTint="@color/b"
-                android:clickable="true"
-                android:elevation="2dp"
-                android:focusable="true"
-                android:gravity="center"
-                android:stateListAnimator="@null">
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                app:cardBackgroundColor="@color/b"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/f"
+                app:strokeWidth="1dp">
 
                 <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/ic_settings"
                     app:tint="@color/f" />
+            </com.google.android.material.card.MaterialCardView>
 
-            </LinearLayout>
-
-            <!-- Close Button -->
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/closeButton"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/bg_outline"
-                android:backgroundTint="@color/b"
-                android:clickable="true"
-                android:elevation="2dp"
-                android:focusable="true"
-                android:gravity="center"
-                android:stateListAnimator="@null">
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="10dp"
+                app:cardBackgroundColor="@color/f"
+                app:cardCornerRadius="14dp">
 
                 <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/ic_close"
-                    app:tint="@color/f" />
-
-            </LinearLayout>
-
+                    app:tint="@color/b" />
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
-        <!-- Progress Line -->
-        <View
-            android:id="@+id/progressLine"
-            android:layout_width="0dp"
+        <!-- Progress Line Ultra -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="@color/f" />
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="#20FFFFFF"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="0dp">
 
+            <View
+                android:id="@+id/progressLine"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:background="@color/t" />
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
-    <!-- ============================================== -->
-    <!-- MAIN CONTENT - ONLY SCRIPT CONTENT           -->
-    <!-- ============================================== -->
+    <!-- SCRIPT CONTENT -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -148,416 +125,352 @@
         android:fillViewport="true"
         android:overScrollMode="never"
         android:scrollbars="none"
-        app:layout_constraintBottom_toTopOf="@+id/bottomSpacer"
+        app:layout_constraintBottom_toTopOf="@id/bottomSpacer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topBar">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/scriptContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingStart="24dp"
-            android:paddingTop="30dp"
-            android:paddingEnd="24dp"
-            android:paddingBottom="20dp">
-
-            <!-- Only Script Content -->
-            <TextView
-                android:id="@+id/scriptContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/aigd"
-                android:lineSpacingExtra="8dp"
-                android:text="Loading script content..."
-                android:textColor="@color/f"
-                android:textSize="18sp" />
-
-        </LinearLayout>
-
+            android:fontFamily="@font/aigd"
+            android:lineSpacingExtra="12dp"
+            android:padding="28dp"
+            android:text="Loading script content..."
+            android:textColor="@color/f"
+            android:textSize="20sp" />
     </androidx.core.widget.NestedScrollView>
 
-    <!-- Bottom Spacer for Settings Panel -->
     <Space
         android:id="@+id/bottomSpacer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
         app:layout_constraintBottom_toTopOf="@+id/settingsPanel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- ============================================== -->
-    <!-- SETTINGS SCRIM                                -->
-    <!-- ============================================== -->
+    <!-- SCRIM -->
     <View
         android:id="@+id/settingsScrim"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.4"
-        android:background="@color/f"
-        android:elevation="10dp"
+        android:alpha="0.5"
+        android:background="@color/b"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- ============================================== -->
-    <!-- SETTINGS PANEL (Small Bottom Sheet)          -->
-    <!-- ============================================== -->
-    <LinearLayout
+    <!-- SETTINGS PANEL ULTRA -->
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/settingsPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/b"
-        android:elevation="16dp"
-        android:orientation="vertical"
-        android:paddingStart="16dp"
-        android:paddingTop="8dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="16dp"
-        android:translationY="400dp"
+        android:translationY="500dp"
         android:visibility="gone"
+        app:cardBackgroundColor="@color/b"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <!-- Handle Bar -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="vertical"
-            android:paddingTop="6dp"
-            android:paddingBottom="10dp">
+            android:padding="20dp">
 
+            <!-- Handle + Title -->
             <View
-                android:layout_width="40dp"
-                android:layout_height="3dp"
-                android:alpha="0.3"
+                android:layout_width="36dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
                 android:background="@color/f"
-                android:clipToOutline="true" />
+                android:alpha="0.2" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="14dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_marginEnd="6dp"
-                    android:src="@drawable/ic_settings"
-                    app:tint="@color/f" />
-
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:fontFamily="@font/aigd"
-                    android:text="Display Settings"
+                    android:text="Reader Settings"
                     android:textColor="@color/f"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/closeSettingsButton"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:layout_marginStart="12dp"
-                    android:background="@drawable/bg_outline"
-                    android:backgroundTint="@color/b"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:stateListAnimator="@null">
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:cardBackgroundColor="@color/f"
+                    app:cardCornerRadius="10dp">
 
                     <ImageView
                         android:layout_width="14dp"
                         android:layout_height="14dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/ic_close"
-                        app:tint="@color/f" />
-
-                </LinearLayout>
-
+                        app:tint="@color/b" />
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:alpha="0.1"
-            android:background="@color/f" />
-
-        <!-- Settings Content (Compact) -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingStart="4dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="4dp"
-            android:paddingBottom="4dp">
-
-            <!-- Font Size -->
+            <!-- Size -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingBottom="4dp">
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_marginEnd="6dp"
-                    android:alpha="0.6"
-                    android:src="@drawable/ic_size"
-                    app:tint="@color/f" />
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:alpha="0.7"
                     android:fontFamily="@font/aigd"
                     android:text="Size"
                     android:textColor="@color/f"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textSize="13sp" />
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1" />
 
-                <TextView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/fontSizeMinus"
-                    android:layout_width="32dp"
-                    android:layout_height="28dp"
-                    android:background="@drawable/bg_filled"
-                    android:backgroundTint="@color/f"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:stateListAnimator="@null"
-                    android:text="−"
-                    android:textColor="@color/b"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    app:cardBackgroundColor="@color/f"
+                    app:cardCornerRadius="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/aigd"
+                        android:text="−"
+                        android:textColor="@color/b"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
 
                 <TextView
                     android:id="@+id/fontSizeValue"
-                    android:layout_width="32dp"
+                    android:layout_width="44dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aigd"
                     android:gravity="center"
                     android:text="18"
                     android:textColor="@color/f"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/fontSizePlus"
-                    android:layout_width="32dp"
-                    android:layout_height="28dp"
-                    android:background="@drawable/bg_filled"
-                    android:backgroundTint="@color/f"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:stateListAnimator="@null"
-                    android:text="+"
-                    android:textColor="@color/b"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/fontSizePlus"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    app:cardBackgroundColor="@color/f"
+                    app:cardCornerRadius="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/aigd"
+                        android:text="+"
+                        android:textColor="@color/b"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
-            <!-- Scroll Speed -->
+            <!-- Speed -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingBottom="4dp">
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_marginEnd="6dp"
-                    android:alpha="0.6"
-                    android:src="@drawable/ic_speed"
-                    app:tint="@color/f" />
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:alpha="0.7"
                     android:fontFamily="@font/aigd"
                     android:text="Speed"
                     android:textColor="@color/f"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textSize="13sp" />
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1" />
 
-                <TextView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/speedMinus"
-                    android:layout_width="32dp"
-                    android:layout_height="28dp"
-                    android:background="@drawable/bg_filled"
-                    android:backgroundTint="@color/f"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:stateListAnimator="@null"
-                    android:text="−"
-                    android:textColor="@color/b"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    app:cardBackgroundColor="@color/b"
+                    app:cardCornerRadius="12dp"
+                    app:strokeColor="@color/f"
+                    app:strokeWidth="1dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="−"
+                        android:textColor="@color/f"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
 
                 <TextView
                     android:id="@+id/speedValue"
-                    android:layout_width="32dp"
+                    android:layout_width="44dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aigd"
                     android:gravity="center"
                     android:text="1.0x"
                     android:textColor="@color/f"
-                    android:textSize="14sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/speedPlus"
-                    android:layout_width="32dp"
-                    android:layout_height="28dp"
-                    android:background="@drawable/bg_filled"
-                    android:backgroundTint="@color/f"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:stateListAnimator="@null"
-                    android:text="+"
-                    android:textColor="@color/b"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    app:cardBackgroundColor="@color/b"
+                    app:cardCornerRadius="12dp"
+                    app:strokeColor="@color/f"
+                    app:strokeWidth="1dp">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="+"
+                        android:textColor="@color/f"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
-            <!-- Line Spacing -->
+            <!-- Spacing -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingBottom="4dp">
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_marginEnd="6dp"
-                    android:alpha="0.6"
-                    android:src="@drawable/ic_spacing"
-                    app:tint="@color/f" />
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:alpha="0.7"
                     android:fontFamily="@font/aigd"
                     android:text="Spacing"
                     android:textColor="@color/f"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textSize="13sp" />
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1" />
 
-                <TextView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/spacingMinus"
-                    android:layout_width="32dp"
-                    android:layout_height="28dp"
-                    android:background="@drawable/bg_filled"
-                    android:backgroundTint="@color/f"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:stateListAnimator="@null"
-                    android:text="−"
-                    android:textColor="@color/b"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    app:cardBackgroundColor="@color/b"
+                    app:cardCornerRadius="12dp"
+                    app:strokeColor="@color/f"
+                    app:strokeWidth="1dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="−"
+                        android:textColor="@color/f"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
 
                 <TextView
                     android:id="@+id/spacingValue"
-                    android:layout_width="32dp"
+                    android:layout_width="44dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aigd"
                     android:gravity="center"
                     android:text="8"
                     android:textColor="@color/f"
-                    android:textSize="14sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/spacingPlus"
-                    android:layout_width="32dp"
-                    android:layout_height="28dp"
-                    android:background="@drawable/bg_filled"
-                    android:backgroundTint="@color/f"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:stateListAnimator="@null"
-                    android:text="+"
-                    android:textColor="@color/b"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    app:cardBackgroundColor="@color/b"
+                    app:cardCornerRadius="12dp"
+                    app:strokeColor="@color/f"
+                    app:strokeWidth="1dp">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="+"
+                        android:textColor="@color/f"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
-            <!-- Reset Button (Small) -->
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/resetSettingsButton"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/bg_outline"
-                android:backgroundTint="@color/b"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:stateListAnimator="@null">
+                android:layout_height="48dp"
+                android:layout_marginTop="18dp"
+                app:cardBackgroundColor="@color/b"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/f"
+                app:strokeWidth="1dp">
 
-                <ImageView
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
-                    android:layout_marginEnd="6dp"
-                    android:src="@drawable/ic_reset"
-                    app:tint="@color/f" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aigd"
-                    android:text="Reset"
-                    android:textColor="@color/f"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_reset"
+                        app:tint="@color/f" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/aigd"
+                        android:text="Reset Settings"
+                        android:textColor="@color/f"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
-
-    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

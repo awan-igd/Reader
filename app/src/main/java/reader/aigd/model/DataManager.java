@@ -1,4 +1,4 @@
-package reader.aigd;
+package reader.aigd.model;
 
 import android.content.ContentValues;
 import android.content.Context;

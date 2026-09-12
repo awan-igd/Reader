@@ -1,102 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/bg_filled"
-    android:backgroundTint="@color/b"
-    android:clickable="true"
-    android:elevation="24dp"
-    android:focusable="true"
-    android:orientation="vertical"
-    android:stateListAnimator="@null"
-    android:translationZ="12dp">
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="#E6000000"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="24dp">
 
-    <!-- ============================================== -->
-    <!-- HEADER STRIP                                   -->
-    <!-- ============================================== -->
-    <RelativeLayout
-        android:id="@+id/topBar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:background="#15FFFFFF"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <!-- App Icon -->
+        <!-- 1. TOP DRAG - بالکل اوپر پتلا -->
         <LinearLayout
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_centerVertical="true"
-            android:background="@drawable/bg_filled"
-            android:backgroundTint="@color/f"
-            android:gravity="center">
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="#0DFFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <View
-                android:layout_width="14dp"
-                android:layout_height="14dp"
-                android:background="@drawable/ic_logo"
-                android:backgroundTint="@color/b" />
+                android:layout_width="36dp"
+                android:layout_height="4dp"
+                android:background="@drawable/bg_filled"
+                android:backgroundTint="#66FFFFFF" />
+
+            <View
+                android:id="@+id/statusDot"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/bg_filled"
+                android:backgroundTint="@color/t" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:fontFamily="@font/aigd"
-            android:letterSpacing="0.02"
-            android:text="READER FLOATING"
-            android:textColor="@color/f"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <!-- Status Indicator -->
-        <View
-            android:id="@+id/statusDot"
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:alpha="0.6"
-            android:background="@drawable/bg_filled"
-            android:backgroundTint="@color/f" />
-
-    </RelativeLayout>
-
-    <!-- ============================================== -->
-    <!-- SCRIPT DISPLAY AREA                          -->
-    <!-- ============================================== -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp">
-
-        <!-- Anchor Line (Reading Guide) -->
-        <View
-            android:id="@+id/anchorLine"
+        <!-- 2. SCRIPT - وزن 1 - اوپر سے نیچے تک پوری جگہ -->
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_gravity="center"
-            android:alpha="0.8"
-            android:background="@color/f"
-            android:elevation="4dp" />
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-        <!-- Scroll View -->
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/overlayScrollView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:overScrollMode="never"
-            android:scrollbars="none">
-
-            <LinearLayout
+            <!-- Anchor Line بیچ میں -->
+            <View
+                android:id="@+id/anchorLine"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="150dp"
-                android:paddingBottom="150dp">
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:alpha="0.3"
+                android:background="@color/t" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/overlayScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none">
 
                 <TextView
                     android:id="@+id/scriptTextView"
@@ -104,233 +64,164 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aigd"
                     android:gravity="center"
-                    android:lineSpacingExtra="12dp"
-                    android:text="Welcome to Reader Floating Teleprompter"
+                    android:lineSpacingExtra="14dp"
+                    android:paddingStart="18dp"
+                    android:paddingTop="160dp"
+                    android:paddingEnd="18dp"
+                    android:paddingBottom="300dp"
                     android:textColor="@color/f"
-                    android:textSize="20sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
+            </androidx.core.widget.NestedScrollView>
+        </FrameLayout>
 
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
-
-
-    </FrameLayout>
-
-    <!-- ============================================== -->
-    <!-- SPEED ADJUSTMENT BAR                         -->
-    <!-- ============================================== -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="#18FFFFFF"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
-
-        <!-- Speed Label -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
-            android:alpha="0.6"
-            android:fontFamily="@font/aigd"
-            android:text="Speed"
-            android:textColor="@color/f"
-            android:textSize="11sp"
-            android:textStyle="bold" />
-
-        <!-- Minus Button -->
+        <!-- 3. SPEED BAR - کنٹرول سے اوپر، باٹم کے قریب -->
         <LinearLayout
-            android:id="@+id/speedMinus"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:background="@drawable/bg_outline"
-            android:backgroundTint="@color/f"
-            android:clickable="true"
-            android:elevation="2dp"
-            android:focusable="true"
-            android:gravity="center"
-            android:stateListAnimator="@null"
-            android:translationZ="2dp">
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#16FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
 
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:src="@drawable/ic_minus"
-                app:tint="@color/b" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/speedMinus"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                app:cardBackgroundColor="#24FFFFFF"
+                app:cardCornerRadius="11dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_minus"
+                    app:tint="@color/f" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <SeekBar
+                android:id="@+id/speedSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:max="50"
+                android:progress="10"
+                android:progressTint="@color/f"
+                android:thumbTint="@color/f" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/speedPlus"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                app:cardBackgroundColor="#24FFFFFF"
+                app:cardCornerRadius="11dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_plus"
+                    app:tint="@color/f" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/speedValueText"
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/aigd"
+                android:gravity="end"
+                android:text="0.10x"
+                android:textColor="@color/t"
+                android:textSize="12sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- SeekBar -->
-        <SeekBar
-            android:id="@+id/speedSeekBar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="1"
-            android:max="300"
-            android:progress="100"
-            android:progressTint="@color/f"
-            android:thumb="@drawable/seekbar_thumb"
-            android:thumbTint="@color/f" />
-
-        <!-- Plus Button -->
+        <!-- 4. CONTROL PANEL - بالکل باٹم پر فکس -->
         <LinearLayout
-            android:id="@+id/speedPlus"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:background="@drawable/bg_outline"
-            android:backgroundTint="@color/f"
-            android:clickable="true"
-            android:elevation="2dp"
-            android:focusable="true"
-            android:gravity="center"
-            android:stateListAnimator="@null"
-            android:translationZ="2dp">
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:background="#1C000000"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
 
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:src="@drawable/ic_plus"
-                app:tint="@color/b" />
-        </LinearLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/closeButton"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                app:cardBackgroundColor="#22FFFFFF"
+                app:cardCornerRadius="14dp">
 
-        <!-- Speed Value -->
-        <TextView
-            android:id="@+id/speedValueText"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:fontFamily="@font/aigd"
-            android:gravity="end"
-            android:text="1.00x"
-            android:textColor="@color/f"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_close"
+                    app:tint="@color/f" />
+            </com.google.android.material.card.MaterialCardView>
 
-    </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-    <!-- ============================================== -->
-    <!-- CONTROL TOOLBAR                              -->
-    <!-- ============================================== -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:background="#15FFFFFF"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/playButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@color/f"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="4dp">
 
-        <!-- Close Button -->
-        <LinearLayout
-            android:id="@+id/closeButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/bg_outline"
-            android:backgroundTint="@color/f"
-            android:clickable="true"
-            android:elevation="2dp"
-            android:focusable="true"
-            android:gravity="center"
-            android:stateListAnimator="@null"
-            android:translationZ="2dp">
+                <ImageView
+                    android:id="@+id/playIcon"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_play"
+                    app:tint="@color/b" />
+            </com.google.android.material.card.MaterialCardView>
 
-            <ImageView
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:src="@drawable/ic_close"
-                app:tint="@color/b" />
-        </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-        <!-- Play Button (Center) -->
-        <LinearLayout
-            android:id="@+id/playButton"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_centerInParent="true"
-            android:background="@drawable/bg_filled"
-            android:backgroundTint="@color/f"
-            android:clickable="true"
-            android:elevation="6dp"
-            android:focusable="true"
-            android:gravity="center"
-            android:stateListAnimator="@null"
-            android:translationZ="6dp">
-
-            <ImageView
-                android:id="@+id/playIcon"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/ic_play"
-                app:tint="@color/b" />
-        </LinearLayout>
-
-        <!-- Right Side Controls -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:orientation="horizontal">
-
-            <!-- Drag Handle -->
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/dragHandle"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
                 android:layout_marginEnd="8dp"
-                android:background="@drawable/bg_outline"
-                android:backgroundTint="@color/f"
-                android:clickable="true"
-                android:elevation="2dp"
-                android:focusable="true"
-                android:gravity="center"
-                android:stateListAnimator="@null"
-                android:translationZ="2dp">
+                app:cardBackgroundColor="#22FFFFFF"
+                app:cardCornerRadius="14dp">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/ic_drag"
-                    app:tint="@color/b" />
-            </LinearLayout>
+                    app:tint="@color/f" />
+            </com.google.android.material.card.MaterialCardView>
 
-            <!-- Resize Handle -->
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/resizeHandle"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@drawable/bg_outline"
-                android:backgroundTint="@color/f"
-                android:clickable="true"
-                android:elevation="2dp"
-                android:focusable="true"
-                android:gravity="center"
-                android:stateListAnimator="@null"
-                android:translationZ="2dp">
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                app:cardBackgroundColor="#22FFFFFF"
+                app:cardCornerRadius="14dp">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/ic_resize"
-                    app:tint="@color/b" />
-            </LinearLayout>
+                    app:tint="@color/f" />
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
-
-    </RelativeLayout>
-
-    <!-- ============================================== -->
-    <!-- BOTTOM ACCENT LINE                           -->
-    <!-- ============================================== -->
-    <View
-        android:layout_width="60dp"
-        android:layout_height="3dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="8dp"
-        android:alpha="0.15"
-        android:background="@color/f" />
-
-</LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

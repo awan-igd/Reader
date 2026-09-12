@@ -2,85 +2,62 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- REQUIRED PERMISSIONS -->
+    <!-- ONLY NEEDED PERMISSIONS -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="28" />
-    <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/ic_logo"
+        android:icon="@drawable/ic_reader"
         android:label="@string/app_name"
-        android:requestLegacyExternalStorage="true"
-        android:roundIcon="@drawable/ic_logo"
+        android:roundIcon="@drawable/ic_reader"
         android:supportsRtl="true"
         android:theme="@style/Theme.Reader"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
-        <!-- Splash Activity (Launcher) -->
         <activity
-            android:name=".SplashActivity"
+            android:name=".activity.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.Reader"
-            android:windowSoftInputMode="adjustResize">
+            android:theme="@style/Theme.Reader">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- Home Activity -->
         <activity
-            android:name=".HomeActivity"
+            android:name=".activity.HomeActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
-        <!-- Add Script Activity -->
         <activity
-            android:name=".AddScriptActivity"
+            android:name=".activity.AddScriptActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
-        <!-- TTS Activity -->
         <activity
-            android:name=".TTSActivity"
+            android:name=".activity.TTSActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
-        <!-- Share Activity -->
         <activity
-            android:name=".ShareActivity"
+            android:name=".activity.ShareActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
-        <!-- About Activity -->
         <activity
-            android:name=".AboutActivity"
+            android:name=".activity.AboutActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
-        <!-- Overlay Activity -->
         <activity
-            android:name=".OverlayActivity"
+            android:name=".activity.OverlayActivity"
             android:exported="false"
-            android:theme="@style/Theme.Reader"
-            android:windowSoftInputMode="adjustResize" />
+            android:theme="@style/Theme.Reader" />
 
-        <!-- Overlay Service -->
         <service
             android:name=".OverlayService"
             android:enabled="true"
@@ -92,5 +69,4 @@
         </service>
 
     </application>
-
 </manifest>

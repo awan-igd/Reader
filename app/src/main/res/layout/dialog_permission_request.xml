@@ -1,160 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="@color/b"
+    android:layout_margin="20dp"
+    app:cardBackgroundColor="@color/b"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/f"
+    app:strokeWidth="1dp">
 
-    android:background="@drawable/bg_outline"
-    android:orientation="vertical"
-    android:padding="24dp">
-
-    <!-- Icon Container -->
-    <FrameLayout
-        android:id="@+id/iconContainer"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_gravity="center"
-        android:background="@drawable/bg_outline"
-        android:backgroundTint="#E3F2FD">
-
-        <ImageView
-            android:id="@+id/iconImage"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_logo"
-            />
-
-    </FrameLayout>
-
-    <!-- Title -->
-    <TextView
-        android:id="@+id/dialogTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/aigd"
-        android:gravity="center"
-        android:text="Overlay Permission"
-        android:textColor="@color/f"
-        android:textSize="22sp"
-        android:textStyle="bold" />
-
-    <!-- Message -->
-    <TextView
-        android:id="@+id/dialogMessage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:alpha="0.7"
-        android:fontFamily="@font/aigd"
-        android:gravity="center"
-        android:lineSpacingExtra="4dp"
-        android:text="Reader needs this permission to show the floating teleprompter on top of other apps."
-        android:textColor="@color/f"
-        android:textSize="14sp" />
-
-    <!-- Divider -->
-    <View
-        android:layout_width="60dp"
-        android:layout_height="2dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:alpha="0.2"
-        android:background="@color/f" />
-
-    <!-- Permission Info Card -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_outline"
-        android:backgroundTint="#F5F7FA"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="24dp">
 
-        <TextView
-            android:id="@+id/permissionName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/aigd"
-            android:text="Display over other apps"
-            android:textColor="@color/b"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+        <!-- Icon -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/iconContainer"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/f"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
 
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_reader" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Title -->
         <TextView
-            android:id="@+id/permissionDescription"
+            android:id="@+id/dialogTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/aigd"
+            android:gravity="center"
+            android:text="Overlay Permission"
+            android:textColor="@color/f"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Message -->
+        <TextView
+            android:id="@+id/dialogMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:alpha="0.6"
             android:fontFamily="@font/aigd"
-            android:text="Allows you to read scripts while using other apps like TikTok, Camera, and YouTube."
-            android:textColor="@color/b"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="Reader needs this permission to show the floating teleprompter on top of other apps."
+            android:textColor="@color/f"
             android:textSize="13sp" />
 
-    </LinearLayout>
+        <View
+            android:layout_width="32dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@color/t" />
 
-    <!-- Buttons -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        <!-- Permission Info - ULTRA -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/f"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp">
 
-        <!-- Cancel Button -->
-        <LinearLayout
-            android:id="@+id/cancelButton"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_filled"
-            android:backgroundTint="#F0F0F0"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:stateListAnimator="@null">
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/aigd"
-                android:text="Cancel"
-                android:textColor="#6C6C8A"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:padding="14dp">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aigd"
+                    android:text="Display over other apps"
+                    android:textColor="@color/b"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
-        <!-- Allow Button -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:alpha="0.6"
+                    android:fontFamily="@font/aigd"
+                    android:text="Allows you to read scripts while using other apps like TikTok, Camera, and YouTube."
+                    android:textColor="@color/b"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Buttons -->
         <LinearLayout
-            android:id="@+id/allowButton"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_filled"
-            android:backgroundTint="@color/f"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:stateListAnimator="@null">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/aigd"
-                android:text="Allow"
-                android:textColor="@color/b"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cancelButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/b"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/f"
+                app:strokeWidth="1dp">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/aigd"
+                    android:text="Cancel"
+                    android:textColor="@color/f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/allowButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/f"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/aigd"
+                    android:text="Allow"
+                    android:textColor="@color/b"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
-
     </LinearLayout>
-
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

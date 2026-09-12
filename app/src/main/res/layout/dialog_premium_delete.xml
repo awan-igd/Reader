@@ -1,145 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_outline"
-    android:backgroundTint="@color/b"
-    android:orientation="vertical"
-    android:padding="24dp">
+    android:layout_margin="24dp"
+    app:cardBackgroundColor="@color/b"
+    app:cardCornerRadius="24dp"
+    app:strokeColor="@color/f"
+    app:strokeWidth="1dp">
 
-    <!-- Icon Container -->
-    <FrameLayout
-        android:id="@+id/iconContainer"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_gravity="center"
-        android:background="@drawable/bg_outline"
-        android:backgroundTint="#FFE5E5">
-
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_delete"
-            app:tint="#FF3B30" />
-
-    </FrameLayout>
-
-    <!-- Title -->
-    <TextView
-        android:id="@+id/dialogTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/aigd"
-        android:gravity="center"
-        android:text="Delete Script"
-        android:textColor="@color/f"
-        android:textSize="22sp"
-        android:textStyle="bold" />
-
-    <!-- Script Name -->
-    <TextView
-        android:id="@+id/scriptName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:alpha="0.7"
-        android:fontFamily="@font/aigd"
-        android:gravity="center"
-        android:text="Script Name"
-        android:textColor="@color/f"
-        android:textSize="16sp" />
-
-    <!-- Divider -->
-    <View
-        android:layout_width="60dp"
-        android:layout_height="2dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="12dp"
-        android:alpha="0.2"
-        android:background="@color/f" />
-
-    <!-- Message -->
-    <TextView
-        android:id="@+id/dialogMessage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:alpha="0.6"
-        android:fontFamily="@font/aigd"
-        android:gravity="center"
-        android:lineSpacingExtra="4dp"
-        android:text="This action cannot be undone. The script will be permanently removed."
-        android:textColor="@color/f"
-        android:textSize="14sp" />
-
-    <!-- Buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-        <!-- Cancel Button -->
-        <LinearLayout
-            android:id="@+id/cancelButton"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_outline"
-            android:backgroundTint="#F0F0F0"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:stateListAnimator="@null">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/aigd"
-                android:text="Cancel"
-                android:textColor="#6C6C8A"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <!-- Delete Button -->
-        <LinearLayout
-            android:id="@+id/deleteButton"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_filled"
-            android:backgroundTint="#FF3B30"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:stateListAnimator="@null">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/iconContainer"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:cardBackgroundColor="@color/t"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="0dp">
 
             <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginEnd="8dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_delete"
-                app:tint="#FFFFFF" />
+                app:tint="@color/f" />
+        </com.google.android.material.card.MaterialCardView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/aigd"
-                android:text="Delete"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/aigd"
+            android:text="Delete Script?"
+            android:textColor="@color/f"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/dialogMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="0.6"
+            android:fontFamily="@font/aigd"
+            android:gravity="center"
+            android:text="This cannot be undone"
+            android:textColor="@color/f"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/scriptName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_outline"
+            android:backgroundTint="@color/f"
+            android:fontFamily="@font/aigd"
+            android:paddingStart="14dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="6dp"
+            android:text="Script Name"
+            android:textColor="@color/b"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cancelButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/f"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/aigd"
+                    android:text="Cancel"
+                    android:textColor="@color/b"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/deleteButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/t"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/aigd"
+                    android:text="Delete"
+                    android:textColor="@color/f"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
-
     </LinearLayout>
-
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

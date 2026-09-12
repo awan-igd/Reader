@@ -25,7 +25,7 @@
             android:id="@+id/logoCard"
             android:layout_width="130dp"
             android:layout_height="130dp"
-            app:cardBackgroundColor="@color/f"
+            app:cardBackgroundColor="@color/b"
             app:cardCornerRadius="65dp"
             app:cardElevation="16dp">
 
@@ -35,7 +35,7 @@
                 android:layout_height="80dp"
                 android:layout_gravity="center"
                 android:contentDescription="App Logo"
-                android:src="@drawable/ic_logo"
+                android:src="@drawable/ic_reader"
                />
 
         </androidx.cardview.widget.CardView>

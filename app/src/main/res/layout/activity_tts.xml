@@ -1,208 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/b"
-    tools:context=".TTSActivity">
+    android:background="@color/b">
 
-    <!-- ============================================== -->
-    <!-- HEADER SECTION                                -->
-    <!-- ============================================== -->
+    <!-- HEADER -->
     <LinearLayout
         android:id="@+id/headerContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/b"
         android:orientation="vertical"
-        android:paddingStart="20dp"
-        android:paddingTop="12dp"
-        android:paddingEnd="20dp"
-        android:paddingBottom="16dp"
+        android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Action Bar -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <!-- Back Button -->
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/backButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
-                android:background="@drawable/bg_outline"
-                android:backgroundTint="@color/f"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:stateListAnimator="@null">
+                app:cardBackgroundColor="@color/f"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp">
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/ic_back"
                     app:tint="@color/b" />
+            </com.google.android.material.card.MaterialCardView>
 
-            </LinearLayout>
-
-            <!-- Spacer -->
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <!-- Title -->
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fontFamily="@font/aigd"
+                android:gravity="center"
                 android:text="Text to Voice"
                 android:textColor="@color/f"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <!-- Spacer -->
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <!-- Save Button -->
-            <LinearLayout
+            <!-- DOWNLOAD BUTTON -->
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/saveButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
-                android:background="@drawable/bg_filled"
-                android:backgroundTint="@color/f"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:stateListAnimator="@null">
+                app:cardBackgroundColor="@color/f"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp">
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/ic_check"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_download"
                     app:tint="@color/b" />
-
-            </LinearLayout>
-
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
-        <!-- Header Title -->
-        <TextView
-            android:id="@+id/headerTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/aigd"
-            android:text="Text to Speech"
-            android:textColor="@color/f"
-            android:textSize="28sp"
-            android:textStyle="bold" />
-
-        <!-- Header Subtitle -->
-        <TextView
-            android:id="@+id/headerSubtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:alpha="0.7"
-            android:fontFamily="@font/aigd"
-            android:text="Convert your script to voice"
-            android:textColor="@color/f"
-            android:textSize="14sp" />
-
+        <View
+            android:layout_width="36dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="14dp"
+            android:background="@color/t" />
     </LinearLayout>
 
-    <!-- ============================================== -->
-    <!-- SCROLLABLE CONTENT                           -->
-    <!-- ============================================== -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/b"
-        android:fillViewport="true"
-        android:scrollbars="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/startAppBanner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerContainer">
+        app:layout_constraintTop_toBottomOf="@id/headerContainer">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingStart="20dp"
-            android:paddingTop="16dp"
-            android:paddingEnd="20dp"
-            android:paddingBottom="120dp">
+            android:padding="20dp"
+            android:paddingBottom="30dp">
 
-            <!-- ========================================== -->
-            <!-- SCRIPT CONTENT DISPLAY                    -->
-            <!-- ========================================== -->
-            <androidx.cardview.widget.CardView
+            <!-- SCRIPT SMALL -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/b"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="0dp"
-                app:strokeColor="@color/f"
-                app:strokeWidth="1dp">
+                app:cardBackgroundColor="@color/f"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/aigd"
-                        android:text="Script Content"
-                        android:textColor="@color/f"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
+                    android:padding="12dp">
 
                     <TextView
                         android:id="@+id/scriptContent"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
                         android:fontFamily="@font/aigd"
-                        android:lineSpacingExtra="6dp"
+                        android:maxLines="3"
                         android:text="No script loaded"
-                        android:textColor="@color/f"
-                        android:textSize="16sp" />
-
+                        android:textColor="@color/b"
+                        android:textSize="12sp" />
                 </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-            </androidx.cardview.widget.CardView>
-
-            <!-- ========================================== -->
-            <!-- SCRIPT TITLE                              -->
-            <!-- ========================================== -->
+            <!-- AUDIO NAME -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:hint="Audio File Name"
+                android:layout_marginTop="12dp"
+                android:hint="Audio file name"
                 app:boxBackgroundColor="@color/b"
-                app:boxCornerRadiusBottomEnd="12dp"
-                app:boxCornerRadiusBottomStart="12dp"
-                app:boxCornerRadiusTopEnd="12dp"
-                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusTopStart="14dp"
                 app:boxStrokeColor="@color/f"
-                app:boxStrokeWidth="1.5dp"
                 app:hintTextColor="@color/f">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -210,23 +137,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aigd"
-                    android:inputType="text"
-                    android:maxLines="1"
                     android:padding="14dp"
                     android:text="My Audio"
                     android:textColor="@color/f"
-                    android:textColorHint="@color/f"
-                    android:textSize="16sp" />
-
+                    android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- ========================================== -->
-            <!-- VOICE SETTINGS CARD                       -->
-            <!-- ========================================== -->
-            <androidx.cardview.widget.CardView
+            <!-- VOICE SETTINGS -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 app:cardBackgroundColor="@color/b"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="0dp"
@@ -237,120 +158,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="14dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/aigd"
-                        android:text="Voice Settings"
-                        android:textColor="@color/f"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <!-- Pitch Control -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/aigd"
-                                android:text="Pitch"
-                                android:textColor="@color/f"
-                                android:textSize="13sp" />
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                android:layout_weight="1" />
-
-                            <TextView
-                                android:id="@+id/pitchValue"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/aigd"
-                                android:text="1.0"
-                                android:textColor="@color/f"
-                                android:textSize="13sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                        <SeekBar
-                            android:id="@+id/pitchSeekBar"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:max="200"
-                            android:progress="100"
-                            android:progressTint="@color/f"
-                            android:thumbTint="@color/f" />
-
-                    </LinearLayout>
-
-                    <!-- Speed Control -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/aigd"
-                                android:text="Speed"
-                                android:textColor="@color/f"
-                                android:textSize="13sp" />
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                android:layout_weight="1" />
-
-                            <TextView
-                                android:id="@+id/speedValue"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/aigd"
-                                android:text="1.0x"
-                                android:textColor="@color/f"
-                                android:textSize="13sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                        <SeekBar
-                            android:id="@+id/speedSeekBar"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:max="300"
-                            android:progress="100"
-                            android:progressTint="@color/f"
-                            android:thumbTint="@color/f" />
-
-                    </LinearLayout>
-
-                    <!-- Language / Voice Selection -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
@@ -358,267 +170,237 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/aigd"
-                            android:text="Voice"
+                            android:text="Pitch"
                             android:textColor="@color/f"
-                            android:textSize="13sp" />
+                            android:textSize="11sp" />
 
-                        <View
+                        <TextView
+                            android:id="@+id/pitchValue"
                             android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
-                        <LinearLayout
-                            android:id="@+id/voiceSelector"
-                            android:layout_width="wrap_content"
-                            android:layout_height="36dp"
-                            android:background="@drawable/bg_outline"
-                            android:backgroundTint="@color/b"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:paddingStart="12dp"
-                            android:paddingEnd="12dp"
-                            android:stateListAnimator="@null">
-
-                            <TextView
-                                android:id="@+id/voiceName"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/aigd"
-                                android:text="Default"
-                                android:textColor="@color/f"
-                                android:textSize="13sp" />
-
-                            <ImageView
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
-                                android:layout_marginStart="6dp"
-                                android:src="@drawable/ic_dropdown"
-                                app:tint="@color/f" />
-
-                        </LinearLayout>
-
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/aigd"
+                            android:gravity="end"
+                            android:text="1.0"
+                            android:textColor="@color/t"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
+                    <SeekBar
+                        android:id="@+id/pitchSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="200"
+                        android:progress="100"
+                        android:progressTint="@color/t"
+                        android:thumbTint="@color/f" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/aigd"
+                            android:text="Speed"
+                            android:textColor="@color/f"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/speedValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/aigd"
+                            android:gravity="end"
+                            android:text="1.0x"
+                            android:textColor="@color/t"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/speedSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="300"
+                        android:progress="100"
+                        android:progressTint="@color/t"
+                        android:thumbTint="@color/f" />
+
+                    <LinearLayout
+                        android:id="@+id/voiceSelector"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_outline"
+                        android:backgroundTint="@color/f"
+                        android:gravity="center_vertical"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/aigd"
+                            android:text="Voice"
+                            android:textColor="@color/b"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/voiceName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/aigd"
+                            android:text="Default"
+                            android:textColor="@color/b"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
                 </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-            </androidx.cardview.widget.CardView>
-
-            <!-- ========================================== -->
-            <!-- AUTO DETECTION STATUS                     -->
-            <!-- ========================================== -->
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/autoDetectCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:visibility="gone"
                 app:cardBackgroundColor="@color/f"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="12dp">
-
+                    android:padding="10dp">
                     <ProgressBar
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:indeterminate="true"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
                         android:indeterminateTint="@color/b" />
-
                     <TextView
                         android:id="@+id/autoDetectStatus"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginStart="8dp"
                         android:fontFamily="@font/aigd"
-                        android:text="Auto-detecting language..."
+                        android:text="Detecting..."
                         android:textColor="@color/b"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
-
+                        android:textSize="11sp" />
                 </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-            </androidx.cardview.widget.CardView>
+            <!-- ONLY 1 PLACE FOR PLAY / PAUSE - TOGGLE -->
+            <FrameLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp">
 
-            <!-- ========================================== -->
-            <!-- PLAYBACK CONTROLS                         -->
-            <!-- ========================================== -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <!-- Play Button -->
-                <LinearLayout
-                    android:id="@+id/playButton"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:background="@drawable/bg_filled"
-                    android:backgroundTint="@color/f"
-                    android:clickable="true"
-                    android:elevation="6dp"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:stateListAnimator="@null"
-                    android:translationZ="4dp">
-
-                    <ImageView
-                        android:id="@+id/playIcon"
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/ic_play"
-                        app:tint="@color/b" />
-
-                </LinearLayout>
-
-                <!-- Stop Button -->
-                <LinearLayout
-                    android:id="@+id/stopButton"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:layout_marginStart="16dp"
-                    android:background="@drawable/bg_outline"
-                    android:backgroundTint="@color/b"
-                    android:clickable="true"
-                    android:elevation="2dp"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:stateListAnimator="@null"
-                    android:translationZ="2dp"
-                    android:visibility="gone">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_pause"
-                        app:tint="@color/f" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- ========================================== -->
-            <!-- PROGRESS INDICATOR                        -->
-            <!-- ========================================== -->
-            <LinearLayout
-                android:id="@+id/progressContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:visibility="gone">
-
+                <!-- Circular Progress -->
                 <ProgressBar
                     android:id="@+id/audioProgress"
                     style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="0dp"
-                    android:layout_height="4dp"
-                    android:layout_weight="1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:max="100"
                     android:progress="0"
-                    android:progressTint="@color/f" />
+                    android:progressDrawable="@drawable/circular_progress" />
 
-                <TextView
-                    android:id="@+id/progressTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="@font/aigd"
-                    android:text="0:00"
-                    android:textColor="@color/f"
-                    android:textSize="12sp" />
 
-            </LinearLayout>
+                <!-- SINGLE TOGGLE BUTTON -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/playButton"
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/f"
+                    app:cardCornerRadius="38dp"
+                    app:cardElevation="6dp">
 
-            <!-- ========================================== -->
-            <!-- SAVE STATUS INDICATOR                     -->
-            <!-- ========================================== -->
-            <LinearLayout
-                android:id="@+id/saveStatus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="12dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                    <ImageView
+                        android:id="@+id/playIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_play"
+                        app:tint="@color/b" />
+                </com.google.android.material.card.MaterialCardView>
+            </FrameLayout>
 
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/ic_check"
-                    app:tint="#4CAF50" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:fontFamily="@font/aigd"
-                    android:text="Audio saved successfully!"
-                    android:textColor="#4CAF50"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <!-- ========================================== -->
-            <!-- FILE LOCATION                             -->
-            <!-- ========================================== -->
             <TextView
                 android:id="@+id/fileLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                android:alpha="0.4"
+                android:layout_marginTop="12dp"
+                android:alpha="0.5"
                 android:fontFamily="@font/aigd"
+                android:gravity="center"
                 android:text=""
                 android:textColor="@color/f"
-                android:textSize="11sp"
+                android:textSize="10sp"
                 android:visibility="gone" />
 
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/saveStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
 
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_check"
+                    app:tint="@color/t" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:fontFamily="@font/aigd"
+                    android:text="Downloaded!"
+                    android:textColor="@color/t"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
-    <!-- ============================================== -->
-    <!-- LOADING OVERLAY                               -->
-    <!-- ============================================== -->
-    <FrameLayout
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/loadingOverlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:visibility="gone"
+        app:cardBackgroundColor="@color/f"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ProgressBar
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_gravity="center"
-            android:indeterminateTint="@color/f" />
+            android:indeterminateTint="@color/b" />
+    </com.google.android.material.card.MaterialCardView>
 
-    </FrameLayout>
-
-    <!-- ============================================== -->
-    <!-- START.IO BANNER AD - BOTTOM                   -->
-    <!-- ============================================== -->
     <com.startapp.sdk.ads.banner.Banner
         android:id="@+id/startAppBanner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
